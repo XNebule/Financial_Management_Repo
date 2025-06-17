@@ -1,0 +1,145 @@
+    <main class="p-6 bg-[#f9f9f9] min-h-screen mt-2 font-sans text-[#1e1e1e] border">
+      <!-- Top Section -->
+      <section class="grid grid-cols-3 gap-6 mb-6">
+        <!-- Activity Chart -->
+        <article class="bg-neutral-100 rounded-xl p-4 shadow-md col-span-1">
+          <header class="flex justify-between items-center mb-2">
+            <h2 class="text-xl font-semibold">Activity</h2>
+            <span class="text-sm text-gray-500">Last 7 days</span>
+          </header>
+          <p class="text-3xl font-bold mb-4">24.9 <span class="text-base font-normal">Hours spent</span></p>
+          <div class="flex items-end justify-between h-32">
+            <!-- Replace with dynamic bars -->
+            <div class="w-6 h-10 bg-purple-300 rounded"></div>
+            <div class="w-6 h-14 bg-purple-300 rounded"></div>
+            <div class="w-6 h-20 bg-purple-300 rounded"></div>
+            <div class="w-6 h-24 bg-purple-300 rounded"></div>
+            <div class="w-6 h-32 bg-purple-600 rounded"></div>
+            <div class="w-6 h-20 bg-purple-400 rounded"></div>
+            <div class="w-6 h-24 bg-purple-400 rounded"></div>
+          </div>
+          <footer class="mt-2 text-sm text-gray-500 flex justify-between">
+            <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
+          </footer>
+        </article>
+  
+        <!-- Progress Statistics -->
+        <section class="bg-neutral-100 rounded-xl p-4 shadow-md col-span-1">
+          <h2 class="text-xl font-semibold mb-4">Progress statistics</h2>
+          <p class="text-3xl font-bold mb-2">64% <span class="text-base font-normal">Total activity</span></p>
+          <div class="h-2 rounded bg-gray-200 mb-4">
+            <div class="w-[64%] h-full bg-purple-500 rounded"></div>
+          </div>
+          <ul class="grid grid-cols-3 gap-2 text-center text-sm">
+            <li>
+              <p class="text-purple-500 font-semibold">8</p>
+              <span>In progress</span>
+            </li>
+            <li>
+              <p class="text-green-500 font-semibold">12</p>
+              <span>Completed</span>
+            </li>
+            <li>
+              <p class="text-orange-400 font-semibold">14</p>
+              <span>Upcoming</span>
+            </li>
+          </ul>
+        </section>
+  
+        <!-- Punctuation Course Card -->
+        <article class="bg-neutral-100 rounded-xl p-4 shadow-md col-span-1">
+          <header class="mb-3">
+            <span class="text-xs text-green-600 font-medium bg-green-100 px-2 py-1 rounded-full">Group course</span>
+            <span class="text-xs text-blue-600 font-medium bg-blue-100 px-2 py-1 rounded-full ml-2">Advanced</span>
+          </header>
+          <h3 class="text-lg font-semibold mb-1">English punctuation made easy</h3>
+          <p class="text-sm text-gray-500 mb-4">Punctuation—learn the basics without the pain. No materials needed.</p>
+          <div class="flex justify-between items-center mb-4">
+            <div class="flex -space-x-2">
+              <img src="https://placehold.co/30" class="rounded-full w-6 h-6" alt="Participant 1" />
+              <img src="https://placehold.co/30" class="rounded-full w-6 h-6" alt="Participant 2" />
+              <img src="https://placehold.co/30" class="rounded-full w-6 h-6" alt="Participant 3" />
+            </div>
+            <div class="w-[50%]">
+              <p class="text-xs text-gray-500 mb-1 text-right">Course progress</p>
+              <div class="w-full h-2 rounded bg-gray-200">
+                <div class="w-[75%] h-full bg-yellow-400 rounded"></div>
+              </div>
+            </div>
+          </div>
+          <a href="#" class="block text-center bg-black text-white py-2 rounded-lg font-medium">Continue learning</a>
+        </article>
+      </section>
+  
+      <!-- Bottom Section -->
+      <section class="grid grid-cols-3 gap-6">
+        <!-- Platform Breakdown -->
+        <aside class="bg-neutral-100 rounded-xl p-4 shadow-md col-span-1">
+          <h2 class="text-xl font-semibold mb-4">By platform</h2>
+          <ul class="space-y-3 text-sm">
+            <li class="flex justify-between items-center">
+              <div class="flex items-center gap-2">
+                <img src="https://placehold.co/24?text=X" alt="Platform" class="w-6 h-6" />
+                <span>8 lessons – Mondly platform</span>
+              </div>
+              <span class="font-medium">12.5 h</span>
+            </li>
+            <li class="flex justify-between items-center">
+              <div class="flex items-center gap-2">
+                <img src="https://placehold.co/24?text=Z" alt="Zoom" class="w-6 h-6" />
+                <span>5 lessons – Zoom</span>
+              </div>
+              <span class="font-medium">6.8 h</span>
+            </li>
+            <li class="flex justify-between items-center">
+              <div class="flex items-center gap-2">
+                <img src="https://placehold.co/24?text=G" alt="Google Meet" class="w-6 h-6" />
+                <span>3 lessons – Google Meet</span>
+              </div>
+              <span class="font-medium">4.2 h</span>
+            </li>
+            <li class="flex justify-between items-center">
+              <div class="flex items-center gap-2">
+                <img src="https://placehold.co/24?text=S" alt="Skype" class="w-6 h-6" />
+                <span>2 lessons – Skype</span>
+              </div>
+              <span class="font-medium">2.5 h</span>
+            </li>
+          </ul>
+        </aside>
+  
+        <!-- Schedule Overview -->
+        <section class="bg-neutral-100 rounded-xl p-4 shadow-md col-span-2">
+          <header class="flex justify-between items-center mb-4">
+            <h2 class="text-xl font-semibold">My schedule</h2>
+            <span class="text-sm text-gray-500">Today</span>
+          </header>
+          <div class="grid grid-cols-3 gap-4 text-sm">
+            <!-- Card 1 -->
+            <article class="bg-gray-100 p-4 rounded-lg">
+              <p class="text-xs text-gray-500 mb-1">10:30 – 12:00</p>
+              <h3 class="font-semibold">Technical English for Beginners</h3>
+              <span class="text-xs text-blue-600 bg-blue-100 px-2 py-1 rounded-full mt-2 inline-block">Beginner</span>
+              <p class="text-xs mt-2">👩‍🏫 Kristin Watson</p>
+            </article>
+  
+            <!-- Card 2 -->
+            <article class="bg-purple-600 text-white p-4 rounded-lg relative">
+              <p class="text-xs text-white/70 mb-1">12:00 – 14:00</p>
+              <h3 class="font-semibold">English punctuation made easy</h3>
+              <span class="text-xs text-white bg-neutral-100/30 px-2 py-1 rounded-full mt-2 inline-block">Advanced</span>
+              <p class="text-xs mt-2">🧑‍🏫 Cody Fisher</p>
+              <span class="absolute top-2 right-2 text-[10px] bg-yellow-400 text-black px-2 py-[2px] rounded-full">Now</span>
+            </article>
+  
+            <!-- Card 3 -->
+            <article class="bg-gray-100 p-4 rounded-lg">
+              <p class="text-xs text-gray-500 mb-1">14:00 – 16:00</p>
+              <h3 class="font-semibold">Technical Spanish for Beginners</h3>
+              <span class="text-xs text-purple-600 bg-purple-100 px-2 py-1 rounded-full mt-2 inline-block">Beginner</span>
+              <p class="text-xs mt-2">👨‍🏫 Jacob Jones</p>
+            </article>
+          </div>
+        </section>
+      </section>
+    </main>
