@@ -1,2 +1,2 @@
-# Spend_Wise-Repop
+# Spend_Wise-Repos
 Spend Wise
