@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>K. PWL</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./src/css/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div
+      class="items-center justify-between shadow-xl rounded-lg bg-white h-[16rem]"
+    >
+      <div class="p-6 flex flex-col justify-between h-full text-black">
+        <!-- Top Section -->
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-banknote-arrow-up-icon lucide-banknote-arrow-up"
+            >
+              <path
+                d="M12 18H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5"
+              />
+              <path d="M18 12h.01" />
+              <path d="M19 22v-6" />
+              <path d="m22 19-3-3-3 3" />
+              <path d="M6 12h.01" />
+              <circle cx="12" cy="12" r="2" />
+            </svg>
+            <p class="text-lg font-semibold">Income</p>
+          </div>
+          <div>
+            <h4 class="text-xl text-green-500 font-bold">+ $10,000.00</h4>
+          </div>
+        </div>
+
+        <!-- Bottom Insight Section -->
+        <div class="flex justify-between mt-4">
+          <div>
+            <p class="text-sm text-gray-500">This Month</p>
+            <h1 class="text-lg font-semibold">$2,000.00</h1>
+          </div>
+          <div>
+            <p class="text-sm text-gray-500">Top Source</p>
+            <h1 class="text-lg font-semibold">Freelance</h1>
+          </div>
+        </div>
+        <div class="border-b border-gray-200"></div>
+        <div class="flex items-center justify-between text-sm">
+            <div class="flex items-center gap-2 text-gray-600">
+              <svg width="20" height="20" stroke-width="1.5" viewBox="0 0 24 24"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 20V12M16 12L19 15M16 12L13 15" stroke="currentColor"
+                  stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M4 14L12 6L15 9L20 4" stroke="currentColor"
+                  stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+              <p class="text-[13px]">12.9% last month</p>
+            </div>
+            <a href="#" class="text-blue-500 hover:underline text-[13px] font-medium">View Details</a>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>

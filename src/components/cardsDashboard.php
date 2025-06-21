@@ -1,10 +1,8 @@
 <main class="flex-1">
-    <div
-        class="grid grid-cols-2 md:grid-cols-3 gap-10 md:gap-6 px-10 mb-8 poppins-extrabold">
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-10 md:gap-6 px-10 mb-8 poppins-extrabold items-stretch">
         <!-- Your Balance -->
-        <div
-            class="items-center justify-center shadow-xl rounded-lg bg-white h-[10rem] md:h-[16rem] col-span-2 md:col-span-1">
-            <div class="p-5 md:p-6 md:flex text-black md:justify-between items-center rounded-lg mb-3">
+        <div class="shadow-xl rounded-lg bg-white col-span-2 md:col-span-1 flex flex-col">
+            <div class="p-5 md:p-6 md:flex text-black md:justify-between items-center mb-3">
                 <div class="flex items-center gap-5 md:gap-2">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -25,169 +23,200 @@
                     <h4 class="text-xl">$10,000.00</h4>
                 </div>
             </div>
-            <div class="justify-center hidden md:flex">
-                <div class="flex flex-col items-center rounded-lg justify-between bg-blue-200 mx-5 px-5 py-3 w-[38rem]">
-                    <div class="flex mb-[1rem] gap-[16rem] items-center">
-
-                        <div>
-                            <h1 class="text-sm font-medium">Account Type</h1>
-                            <p class="text-sm">Credit Card</p>
-                        </div>
-                        <div>
-                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 48 48">
-                                <path fill="#1565C0" d="M45,35c0,2.209-1.791,4-4,4H7c-2.209,0-4-1.791-4-4V13c0-2.209,1.791-4,4-4h34c2.209,0,4,1.791,4,4V35z"></path>
-                                <path fill="#FFF" d="M15.186 19l-2.626 7.832c0 0-.667-3.313-.733-3.729-1.495-3.411-3.701-3.221-3.701-3.221L10.726 30v-.002h3.161L18.258 19H15.186zM17.689 30L20.56 30 22.296 19 19.389 19zM38.008 19h-3.021l-4.71 11h2.852l.588-1.571h3.596L37.619 30h2.613L38.008 19zM34.513 26.328l1.563-4.157.818 4.157H34.513zM26.369 22.206c0-.606.498-1.057 1.926-1.057.928 0 1.991.674 1.991.674l.466-2.309c0 0-1.358-.515-2.691-.515-3.019 0-4.576 1.444-4.576 3.272 0 3.306 3.979 2.853 3.979 4.551 0 .291-.231.964-1.888.964-1.662 0-2.759-.609-2.759-.609l-.495 2.216c0 0 1.063.606 3.117.606 2.059 0 4.915-1.54 4.915-3.752C30.354 23.586 26.369 23.394 26.369 22.206z"></path>
-                                <path fill="#FFC107" d="M12.212,24.945l-0.966-4.748c0,0-0.437-1.029-1.573-1.029c-1.136,0-4.44,0-4.44,0S10.894,20.84,12.212,24.945z"></path>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="flex p-2 items-center justify-center gap-[6rem] items-center">
-                        <p class="text-lg">**** **** **** **27</p>
-                        <div class="items-center flex gap-3">
-                            <p class="text-lg ">$2,500.00</p>
-                            <a href="" class="rounded-full bg-gray-300 hover:bg-gray-400 p-1">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
-                                </svg>
-                            </a>
-
-                        </div>
-                    </div>
+            <div class="border-t border-gray-200 mt-auto px-6 py-2 flex items-center justify-between text-sm">
+                <div class="flex items-center gap-2 text-gray-600">
+                    <svg width="20" height="20" stroke-width="1.5" viewBox="0 0 24 24"
+                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16 20V12M16 12L19 15M16 12L13 15" stroke="currentColor"
+                            stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M4 14L12 6L15 9L20 4" stroke="currentColor"
+                            stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                    <p class="text-[13px]">12.9% last month</p>
                 </div>
+                <a href="#" class="text-blue-500 hover:underline text-[13px] font-medium">View Details</a>
             </div>
         </div>
 
         <!-- Pemasukan Bulan Ini -->
-        <div
-            class="items-center justify-between shadow-xl rounded-lg bg-white h-[16rem]">
-            <div class="p-6 flex text-black justify-between">
-                <div class="flex justify-between items-center gap-2">
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        class="lucide lucide-banknote-arrow-up-icon lucide-banknote-arrow-up">
-                        <path
-                            d="M12 18H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5" />
-                        <path d="M18 12h.01" />
-                        <path d="M19 22v-6" />
-                        <path d="m22 19-3-3-3 3" />
-                        <path d="M6 12h.01" />
-                        <circle cx="12" cy="12" r="2" />
-                    </svg>
-                    <p class="text-lg">Revenue</p>
+        <div class="shadow-xl rounded-lg bg-white flex flex-col">
+            <div class="p-6 flex flex-col justify-between h-full text-black flex-grow">
+                <!-- Top Section -->
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-2">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="lucide lucide-banknote-arrow-up-icon lucide-banknote-arrow-up">
+                            <path
+                                d="M12 18H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5" />
+                            <path d="M18 12h.01" />
+                            <path d="M19 22v-6" />
+                            <path d="m22 19-3-3-3 3" />
+                            <path d="M6 12h.01" />
+                            <circle cx="12" cy="12" r="2" />
+                        </svg>
+                        <p class="text-lg font-semibold">Income</p>
+                    </div>
+                    <div>
+                        <h4 class="text-xl text-green-500 font-bold">+ $10,000.00</h4>
+                    </div>
                 </div>
-                <div class="">
-                    <h4 class="text-xl text-green-500">+ $10,000.00</h4>
+
+                <!-- Bottom Insight Section -->
+                <div class="flex justify-between">
+                    <div class="px-3">
+                        <p class="text-lg text-gray-500 poppins-thin">This Month</p>
+                        <h1 class="text-xl poppins-extrabold">$2,000.00</h1>
+                    </div>
+                    <div class="px-3">
+                        <p class="text-lg text-gray-500 poppins-thin">Top Source</p>
+                        <h1 class="text-xl poppins-extrabold">Freelance</h1>
+                    </div>
+                </div>
+                <div class="border-b border-gray-200 -mb-10"></div>
+                <div class="flex items-center justify-between text-sm">
+                    <div class="flex items-center gap-2 text-gray-600">
+                        <svg width="20" height="20" stroke-width="1.5" viewBox="0 0 24 24"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16 20V12M16 12L19 15M16 12L13 15" stroke="currentColor"
+                                stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M4 14L12 6L15 9L20 4" stroke="currentColor"
+                                stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                        <p class="text-[13px]">12.9% last month</p>
+                    </div>
+                    <a href="#" class="text-blue-500 hover:underline text-[13px] font-medium">View Details</a>
                 </div>
             </div>
         </div>
 
-        <!-- Pemasukan Tahun Ini -->
-        <div
-            class="items-center justify-between shadow-xl rounded-lg bg-white h-[16rem]">
-            <div class="p-6 flex text-black justify-between">
-                <div class="flex justify-between items-center gap-2">
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        class="lucide lucide-banknote-arrow-down-icon lucide-banknote-arrow-down">
-                        <path
-                            d="M12 18H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5" />
-                        <path d="m16 19 3 3 3-3" />
-                        <path d="M18 12h.01" />
-                        <path d="M19 16v6" />
-                        <path d="M6 12h.01" />
-                        <circle cx="12" cy="12" r="2" />
-                    </svg>
-
-                    <p class="text-lg">Expenses</p>
+        <!-- Pengeluaran Bulan ini -->
+        <div class="shadow-xl rounded-lg bg-white flex flex-col">
+            <div class="p-4 flex flex-col justify-between gap-4 text-black flex-grow">
+                <!-- Top Section -->
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-banknote-arrow-down-icon text-red-500">
+                            <path d="M12 18H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5" />
+                            <path d="m16 19 3 3 3-3" />
+                            <path d="M18 12h.01" />
+                            <path d="M19 16v6" />
+                            <path d="M6 12h.01" />
+                            <circle cx="12" cy="12" r="2" />
+                        </svg>
+                        <p class="text-lg font-semibold">Expenses</p>
+                    </div>
+                    <h4 class="text-xl text-red-500 font-bold">- $10,000.00</h4>
                 </div>
-                <div class="">
-                    <h4 class="text-xl text-red-500">- $10,000.00</h4>
+
+                <!-- Middle: Charts -->
+                <div class="flex items-center justify-between p-4 mx-10">
+                    <!-- Doughnut -->
+                    <div class="w-[6rem]">
+                        <canvas id="doughnutChart" class=""></canvas>
+                    </div>
+
+                    <!-- Bar -->
+                    <div class="w-[12rem]">
+                        <canvas id="barChart" class=""></canvas>
+                    </div>
+                </div>
+
+                <div class="border-b border-gray-200 "></div>
+                <div class="flex items-center justify-between text-sm ">
+                    <div class="flex items-center gap-2 text-gray-600">
+                        <svg width="20" height="20" stroke-width="1.5" viewBox="0 0 24 24"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16 20V12M16 12L19 15M16 12L13 15" stroke="currentColor"
+                                stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M4 14L12 6L15 9L20 4" stroke="currentColor"
+                                stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                        <p class="text-[13px]">12.9% last month</p>
+                    </div>
+                    <a href="#" class="text-blue-500 hover:underline text-[13px] font-medium">View Details</a>
                 </div>
             </div>
         </div>
     </div>
 
-    <div
-        class="grid grid-cols-1 md:grid-cols-2 gap-6 px-10 mb-8 poppins-extrabold">
-        <!-- Your Balance -->
-        <div
-            class="items-center justify-between shadow-xl rounded-lg bg-white h-[32rem]">
-            <div class="p-6 flex text-black justify-between">
-                <div class="flex justify-between items-center gap-2">
-                    <svg
-                        width="24px"
-                        height="24px"
-                        stroke-width="1.5"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                        color="#000000">
-                        <path
-                            d="M16 20V12M16 12L19 15M16 12L13 15"
-                            stroke="#000000"
-                            stroke-width="1.5"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"></path>
-                        <path
-                            d="M4 14L12 6L15 9L20 4"
-                            stroke="#000000"
-                            stroke-width="1.5"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"></path>
+    <!-- Analytics -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 px-10 mb-8 poppins-extrabold">
+
+        <!-- Income Analytics -->
+        <div class="shadow-xl rounded-lg bg-white flex flex-col">
+            <div class="p-6 flex text-black justify-between items-center">
+                <div class="flex items-center gap-2">
+                    <svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24"
+                        fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000">
+                        <path d="M16 20V12M16 12L19 15M16 12L13 15"
+                            stroke="#000000" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M4 14L12 6L15 9L20 4"
+                            stroke="#000000" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round"></path>
                     </svg>
-                    <p class="text-lg">Revenue Analysis</p>
+                    <p class="text-lg">Income Analytics</p>
                     <p class="text-lg">[Pertahun]</p>
                 </div>
             </div>
+            <div class="border-t border-gray-200 mt-auto px-6 py-2 flex items-center justify-between text-sm">
+                <div class="flex items-center gap-2 text-gray-600">
+                    <svg width="20" height="20" stroke-width="1.5" viewBox="0 0 24 24"
+                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16 20V12M16 12L19 15M16 12L13 15"
+                            stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M4 14L12 6L15 9L20 4"
+                            stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                    <p class="text-[13px]">12.9% last month</p>
+                </div>
+                <a href="#" class="text-blue-500 hover:underline text-[13px] font-medium">View Details</a>
+            </div>
         </div>
 
-        <!-- Pemasukan Bulan Ini -->
-        <div
-            class="items-center justify-between shadow-xl rounded-lg bg-white h-[32rem]">
-            <div class="p-6 flex text-black justify-between">
-                <div class="flex justify-between items-center gap-2">
-                    <svg
-                        width="24px"
-                        height="24px"
-                        stroke-width="1.5"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                        color="#000000">
-                        <path
-                            d="M4 10L12 18L15 15L20 20"
-                            stroke="#000000"
-                            stroke-width="1.5"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"></path>
-                        <path
-                            d="M16 4V12M16 12L19 9M16 12L13 9"
-                            stroke="#000000"
-                            stroke-width="1.5"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"></path>
+        <!-- Expenses Analytics -->
+        <div class="shadow-xl rounded-lg bg-white flex flex-col">
+            <div class="p-6 flex text-black justify-between items-center">
+                <div class="flex items-center gap-2">
+                    <svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24"
+                        fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000">
+                        <path d="M4 10L12 18L15 15L20 20"
+                            stroke="#000000" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M16 4V12M16 12L19 9M16 12L13 9"
+                            stroke="#000000" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round"></path>
                     </svg>
-
-                    <p class="text-lg">Expenses Analysis</p>
+                    <p class="text-lg">Expenses Analytics</p>
                     <p class="text-lg">[Pertahun]</p>
                 </div>
             </div>
+            <div class="border-t border-gray-200 mt-auto px-6 py-2 flex items-center justify-between text-sm">
+                <div class="flex items-center gap-2 text-gray-600">
+                    <svg width="20" height="20" stroke-width="1.5" viewBox="0 0 24 24"
+                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16 20V12M16 12L19 15M16 12L13 15"
+                            stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M4 14L12 6L15 9L20 4"
+                            stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                    <p class="text-[13px]">12.9% last month</p>
+                </div>
+                <a href="#" class="text-blue-500 hover:underline text-[13px] font-medium">View Details</a>
+            </div>
         </div>
+
     </div>
 </main>
