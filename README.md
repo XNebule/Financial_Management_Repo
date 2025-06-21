@@ -29,8 +29,6 @@ A brief description of your project goes here.
 - CSS / TailwindCSS
 - JavaScript
 - PHP / MySQL
-- PostgreSQL
-- Node.js
 
 ---
 
@@ -38,32 +36,21 @@ A brief description of your project goes here.
 
 ```bash
 # Clone the repo
-git clone https://github.com/yourusername/yourproject.git
+git clone https://github.com/XNebule/Financial_Management_Repo.git
 
 # Go into the project folder
-cd yourproject
+cd Financial_Management_Repo.git
 
-# Install dependencies
-npm install
+# go to built-in terminal / command line
+php -S localhost:8080
 
-# Run locally
-npm start
+#go to web type
+localhost:8080
 ```
 
 ---
 
-## ⚙️ Usage
-
-```js
-// Example JavaScript function
-function greet(name) {
-  return `Hello, ${name}!`;
-}
-```
-
----
-
-## 💡 Examples
+<!-- ## 💡 Examples
 
 ### Blockquote
 > “Simplicity is the soul of efficiency.” – Austin Freeman
@@ -142,10 +129,10 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
----
+--- -->
 
 ## 🙋‍♂️ Author
 
 **Your Name**  
-GitHub: [@yourusername](https://github.com/yourusername)  
-Website: [yourwebsite.com](https://yourwebsite.com)
+GitHub: [@XNebule](https://github.com/XNebule)  
+<!-- Website: [yourwebsite.com](https://yourwebsite.com) -->
