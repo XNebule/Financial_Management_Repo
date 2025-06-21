@@ -1,6 +1,6 @@
-# 🚀 Project Title
+# 🚀 Spend Wise -- Financial Management APP
 
-A brief description of your project goes here.
+Spend Wise is a simple yet powerful financial management app designed to help users track their income, monitor expenses, and manage budgets effectively. With a clean UI and easy-to-use features, it empowers users to make smarter financial decisions and stay in control of their money.
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Status](https://img.shields.io/badge/status-active-brightgreen)
