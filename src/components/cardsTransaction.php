@@ -9,12 +9,12 @@ $tab = $_GET['tab'] ?? 'deposit'; // Default to 'deposit'
             <a
                 href="?page=transaction&tab=deposit"
                 class="group flex items-center justify-center gap-3 p-2 rounded-md hover:bg-[#7693fb]/20 hover:shadow-xl transition">
-                <h1 class="group-hover:text-[#7693fb] transition">Deposit</h1>
+                <h1 class="group-hover:text-[#7693fb] transition">Income</h1>
             </a>
             <a
                 href="?page=transaction&tab=withdraw"
                 class="group flex items-center justify-center gap-3 p-2 rounded-md hover:bg-[#7693fb]/20 hover:shadow-xl transition">
-                <h1 class="group-hover:text-[#7693fb] transition">Withdraw</h1>
+                <h1 class="group-hover:text-[#7693fb] transition">Expenses</h1>
             </a>
             <a
                 href="?page=transaction&tab=all"
@@ -49,5 +49,5 @@ $tab = $_GET['tab'] ?? 'deposit'; // Default to 'deposit'
         ?>
     </div>
 
-    <?php include $basePath . 'transactionDialog.php'; ?>
+    <?php include $basePath . 'transactionModals.php'; ?>
 </body>

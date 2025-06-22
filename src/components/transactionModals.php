@@ -2,14 +2,17 @@
 <div id="transactionModal" class="fixed inset-0 bg-black/40 hidden items-center justify-center z-50">
     <div class="bg-white rounded-lg shadow-lg w-full max-w-md">
         <div class="p-6 border-b flex justify-between items-center">
-            <h2 class="text-xl font-semibold text-gray-700">Add <?= ucfirst($tab) ?> Transaction</h2>
+            <h2 id="modalTitle" class="text-xl font-semibold text-gray-700">Add Transaction</h2>
             <button onclick="closeModal()" class="text-gray-400 hover:text-gray-600">&times;</button>
         </div>
         <form action="transaksi_act.php" method="POST" class="p-6 space-y-4">
-            <input type="hidden" name="type" value="<?= $tab ?>">
+            <input type="hidden" name="type" id="transactionType" value="">
             <div>
                 <label class="block mb-1 text-sm font-medium text-gray-700">Category</label>
-                <input type="text" name="category" required class="w-full border rounded px-3 py-2" />
+                <select name="category" id="categorySelect" required class="w-full border rounded px-3 py-2">
+                    <option value="">-- Select Category --</option>
+                    <!-- JS will populate -->
+                </select>
             </div>
             <div>
                 <label class="block mb-1 text-sm font-medium text-gray-700">Amount</label>
