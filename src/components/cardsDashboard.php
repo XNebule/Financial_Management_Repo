@@ -10,7 +10,7 @@
                         viewBox="0 0 24 24"
                         stroke-width="2"
                         stroke="currentColor"
-                        class="size-[1rem] md:size-6">
+                        class="size-[1rem] md:size-6 stroke-[#7693fb]">
                         <path
                             stroke-linecap="round"
                             stroke-linejoin="round"
@@ -20,11 +20,11 @@
                     <p class="hidden md:block text-lg">Your Balance</p>
                 </div>
                 <div class="">
-                    <h4 class="text-xl">$10,000.00</h4>
+                    <h4 class="text-xl text-[#7693fb]">$10,000.00</h4>
                 </div>
             </div>
 
-            
+
             <!-- bottom part -->
             <div class="border-t border-gray-200 mt-auto px-6 py-2 flex items-center justify-between text-sm">
                 <div class="flex items-center gap-2 text-gray-600">
@@ -41,7 +41,7 @@
             </div>
         </div>
 
-        <!-- Pemasukan Bulan Ini -->
+        <!-- Income Card -->
         <div class="shadow-xl rounded-lg bg-white flex flex-col">
             <div class="p-6 flex flex-col justify-between h-full text-black flex-grow">
                 <!-- Top Section -->
@@ -57,7 +57,7 @@
                             stroke-width="2"
                             stroke-linecap="round"
                             stroke-linejoin="round"
-                            class="lucide lucide-banknote-arrow-up-icon lucide-banknote-arrow-up">
+                            class="lucide lucide-banknote-arrow-up-icon lucide-banknote-arrow-up text-green-500">
                             <path
                                 d="M12 18H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5" />
                             <path d="M18 12h.01" />
@@ -101,7 +101,7 @@
             </div>
         </div>
 
-        <!-- Pengeluaran Bulan ini -->
+        <!-- Expenses Card -->
         <div class="shadow-xl rounded-lg bg-white flex flex-col">
             <div class="p-6 flex flex-col justify-between gap-4 text-black flex-grow">
                 <!-- Top Section -->
@@ -159,7 +159,7 @@
     <!-- Analytics -->
     <div class="grid grid-cols-1 md:grid-cols-4 gap-6 px-8 mb-8 poppins-extrabold">
 
-        <!-- Income Analytics -->
+        <!-- Savings -->
         <div class="shadow-xl rounded-lg bg-white flex flex-col">
             <div class="p-6 flex text-black justify-between items-center">
                 <div class="flex items-center gap-2">
@@ -175,6 +175,11 @@
                     <p class="text-lg">Savings</p>
                 </div>
             </div>
+
+            <div class="px-6 pb-4">
+                <canvas id="savingsDoughnutChart" width="250" height="250"></canvas>
+            </div>
+
             <div class="border-t border-gray-200 mt-auto px-6 py-2 flex items-center justify-between text-sm">
                 <div class="flex items-center gap-2 text-gray-600">
                     <svg width="20" height="20" stroke-width="1.5" viewBox="0 0 24 24"
@@ -190,23 +195,23 @@
             </div>
         </div>
 
-        <!-- Expenses Analytics -->
+        <!-- Analytics -->
         <div class="col-span-3 shadow-xl rounded-lg bg-white flex flex-col">
             <div class="p-6 flex text-black justify-between items-center">
                 <div class="flex items-center gap-2">
-                    <svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24"
-                        fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000">
-                        <path d="M4 10L12 18L15 15L20 20"
-                            stroke="#000000" stroke-width="1.5"
-                            stroke-linecap="round" stroke-linejoin="round"></path>
-                        <path d="M16 4V12M16 12L19 9M16 12L13 9"
-                            stroke="#000000" stroke-width="1.5"
-                            stroke-linecap="round" stroke-linejoin="round"></path>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 1 0 7.5 7.5h-7.5V6Z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0 0 13.5 3v7.5Z" />
                     </svg>
-                    <p class="text-lg">Expenses Analytics</p>
-                    <p class="text-lg">[Pertahun]</p>
+
+                    <p class="text-lg">Analytics</p>
                 </div>
             </div>
+
+            <div class="p-2">
+                <canvas id="expensesLineChart" height="86"></canvas>
+            </div>
+
             <div class="border-t border-gray-200 mt-auto px-6 py-2 flex items-center justify-between text-sm">
                 <div class="flex items-center gap-2 text-gray-600">
                     <svg width="20" height="20" stroke-width="1.5" viewBox="0 0 24 24"

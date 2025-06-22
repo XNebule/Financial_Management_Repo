@@ -17,39 +17,30 @@ $basePath = __DIR__ . '/../components/'; ?>
     rel="stylesheet" />
 </head>
 
-<body class="bg-slate-100 poppins-extrabold">
+<body class="bg-slate-100 min-h-screen md:overflow-y-hidden">
   <div class="flex min-h-screen">
     <!-- Sidebar -->
     <?php include $basePath . 'sidebar.php'; ?>
 
+
     <!-- Main Content -->
-    <div class="flex-1 flex flex-col">
+    <div class="flex-1 flex flex-col ">
       <!-- Header -->
       <?php include $basePath . 'header.php'; ?>
-
-      <div class="container">
-        <div class="flex justify-start items-center mx-2 px-7 py-2 gap-2 mb-4">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-3">
-            <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
-          </svg>
-          <h1 class="text-2xl poppins-extrabold text-black">Dashboard</h1>
-        </div>
-        <div class="flex gap-4">
-          <a
-            href="tambah.php"
-            class="bg-white text-black hover:text-[#7693fb] hover:bg-[#7693fb]/20 px-7 py-2 rounded shadow-xl transition">Tambah Transaksi</a>
-
-          <a
-            href="tambah.php"
-            class="bg-white text-black hover:text-[#7693fb] hover:bg-[#7693fb]/20 px-7 py-2 rounded shadow-xl transition">Kategori</a>
-        </div>
-
-        <div class="overflow-x-auto mt-6">
-
-        </div>
+      <div class="flex justify-start items-center mx-2 px-7 py-2 gap-2 mb-4">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-3">
+          <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+        </svg>
+        <h1 class="text-2xl poppins-extrabold text-black">Transaction</h1>
       </div>
+
+      <!-- Page Content -->
+      <?php include $basePath . 'cardsTransaction.php'; ?>
     </div>
   </div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="/src/js/contentChart.js"></script>
+  <script src="/src/js/transactionModals.js"></script>
 </body>
 
 </html>

@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
   const doughnutCanvas = document.getElementById("doughnutChart");
   const barCanvas = document.getElementById("barChart");
+  const lineChart = document.getElementById("expensesLineChart").getContext("2d");
+  const savingsChart = document.getElementById("savingsDoughnutChart").getContext("2d");
   const doughnutCtx = doughnutCanvas.getContext("2d");
   const barCtx = barCanvas.getContext("2d");
 
@@ -27,6 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const categories = Object.keys(expensesData.categories);
   const amounts = Object.values(expensesData.categories);
+
   const backgroundColors = [
     "#FF6384",
     "#36A2EB",
@@ -110,5 +113,70 @@ document.addEventListener("DOMContentLoaded", function () {
         },
       },
     },
+  });
+
+  // Line Chart for Analytics
+  new Chart(lineChart, {
+    type: "line",
+    data: {
+      labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"],
+      datasets: [{
+        label: "Monthly Expenses",
+        data: [500, 800, 700, 1000, 950, 1100, 900],
+        fill: false,
+        borderColor: "#ef4444",
+        backgroundColor: "#ef4444",
+        tension: 0.3,
+        pointBackgroundColor: "#ef4444",
+        pointRadius: 5
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: {
+          display: false
+        }
+      },
+      scales: {
+        y: {
+          beginAtZero: true,
+          ticks: {
+            callback: (value) => `$${value}`
+          }
+        }
+      }
+    }
+  });
+
+  // Doughnut Chart for Savings
+  
+  new Chart(savingsChart, {
+    type: "doughnut",
+    data: {
+      labels: ["Saved", "Spent"],
+      datasets: [{
+        label: "Savings",
+        data: [6000, 4000], // example values
+        backgroundColor: ["#10b981", "#f87171"], // green & red
+        borderColor: "#fff",
+        borderWidth: 3
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: {
+          position: "bottom",
+          labels: {
+            color: "#6b7280", // Tailwind gray-500
+            font: {
+              size: 14
+            }
+          }
+        }
+      },
+      cutout: "70%"
+    }
   });
 });
