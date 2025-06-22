@@ -1,5 +1,5 @@
 <main class="flex-1">
-    <div class="grid grid-cols-2 md:grid-cols-3 gap-10 md:gap-6 px-10 mb-8 poppins-extrabold items-stretch">
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-10 md:gap-6 px-8 mb-5 poppins-extrabold items-stretch">
         <!-- Your Balance -->
         <div class="shadow-xl rounded-lg bg-white col-span-2 md:col-span-1 flex flex-col">
             <div class="p-5 md:p-6 md:flex text-black md:justify-between items-center mb-3">
@@ -23,6 +23,9 @@
                     <h4 class="text-xl">$10,000.00</h4>
                 </div>
             </div>
+
+            
+            <!-- bottom part -->
             <div class="border-t border-gray-200 mt-auto px-6 py-2 flex items-center justify-between text-sm">
                 <div class="flex items-center gap-2 text-gray-600">
                     <svg width="20" height="20" stroke-width="1.5" viewBox="0 0 24 24"
@@ -100,7 +103,7 @@
 
         <!-- Pengeluaran Bulan ini -->
         <div class="shadow-xl rounded-lg bg-white flex flex-col">
-            <div class="p-4 flex flex-col justify-between gap-4 text-black flex-grow">
+            <div class="p-6 flex flex-col justify-between gap-4 text-black flex-grow">
                 <!-- Top Section -->
                 <div class="flex items-center justify-between">
                     <div class="flex items-center gap-2">
@@ -136,11 +139,13 @@
                 <div class="border-b border-gray-200 "></div>
                 <div class="flex items-center justify-between text-sm ">
                     <div class="flex items-center gap-2 text-gray-600">
-                        <svg width="20" height="20" stroke-width="1.5" viewBox="0 0 24 24"
-                            fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M16 20V12M16 12L19 15M16 12L13 15" stroke="currentColor"
+                        <svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24"
+                            fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000">
+                            <path d="M4 10L12 18L15 15L20 20"
+                                stroke="#000000" stroke-width="1.5"
                                 stroke-linecap="round" stroke-linejoin="round"></path>
-                            <path d="M4 14L12 6L15 9L20 4" stroke="currentColor"
+                            <path d="M16 4V12M16 12L19 9M16 12L13 9"
+                                stroke="#000000" stroke-width="1.5"
                                 stroke-linecap="round" stroke-linejoin="round"></path>
                         </svg>
                         <p class="text-[13px]">12.9% last month</p>
@@ -152,7 +157,7 @@
     </div>
 
     <!-- Analytics -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 px-10 mb-8 poppins-extrabold">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6 px-8 mb-8 poppins-extrabold">
 
         <!-- Income Analytics -->
         <div class="shadow-xl rounded-lg bg-white flex flex-col">
@@ -167,8 +172,7 @@
                             stroke="#000000" stroke-width="1.5"
                             stroke-linecap="round" stroke-linejoin="round"></path>
                     </svg>
-                    <p class="text-lg">Income Analytics</p>
-                    <p class="text-lg">[Pertahun]</p>
+                    <p class="text-lg">Savings</p>
                 </div>
             </div>
             <div class="border-t border-gray-200 mt-auto px-6 py-2 flex items-center justify-between text-sm">
@@ -187,7 +191,7 @@
         </div>
 
         <!-- Expenses Analytics -->
-        <div class="shadow-xl rounded-lg bg-white flex flex-col">
+        <div class="col-span-3 shadow-xl rounded-lg bg-white flex flex-col">
             <div class="p-6 flex text-black justify-between items-center">
                 <div class="flex items-center gap-2">
                     <svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24"
