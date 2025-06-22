@@ -43,7 +43,7 @@
           </svg>
           <h1 class="group-hover:text-[#7693fb] transition">Transactions</h1>
         </a>
-        <a
+        <!-- <a
           href="#"
           class="group flex items-center justify-center gap-3 p-2 rounded-md hover:bg-[#7693fb]/20 hover:shadow-xl transition">
           <svg
@@ -63,11 +63,11 @@
               d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
           </svg>
           <h1 class="group-hover:text-[#7693fb] transition">Settings</h1>
-        </a>
+        </a> -->
       </nav>
     </div>
 
-    <!-- Logout -->
+    <!-- Logout
     <div class="poppins-extrabold mt-8">
       <a
         href="#"
@@ -86,6 +86,6 @@
         </svg>
         <h1 class="group-hover:text-[#7693fb] transition">Logout</h1>
       </a>
-    </div>
+    </div> -->
   </div>
 </aside>

@@ -1,53 +1,49 @@
-<?php
-$basePath = __DIR__ . '/../components/';
-$tab = $_GET['tab'] ?? 'deposit'; // Default to 'deposit'
-?>
+<?php include __DIR__ . '/../../dbConnection.php'; ?>
 
-<body class="">
-    <div class="flex justify-between items-center px-7 poppins-extrabold">
-        <div class="flex mx-2 gap-2 mb-4 poppins-extrabold">
-            <a
-                href="?page=transaction&tab=deposit"
-                class="group flex items-center justify-center gap-3 p-2 rounded-md hover:bg-[#7693fb]/20 hover:shadow-xl transition">
-                <h1 class="group-hover:text-[#7693fb] transition">Income</h1>
-            </a>
-            <a
-                href="?page=transaction&tab=withdraw"
-                class="group flex items-center justify-center gap-3 p-2 rounded-md hover:bg-[#7693fb]/20 hover:shadow-xl transition">
-                <h1 class="group-hover:text-[#7693fb] transition">Expenses</h1>
-            </a>
-            <a
-                href="?page=transaction&tab=all"
-                class="group flex items-center justify-center gap-3 p-2 rounded-md hover:bg-[#7693fb]/20 hover:shadow-xl transition">
-                <h1 class="group-hover:text-[#7693fb] transition">All Transaction</h1>
-            </a>
-        </div>
-        <a href="#"
-            id="addTransactionBtn"
-            class="group flex items-center justify-center gap-3 p-2 rounded-full hover:bg-[#7693fb]/20 hover:shadow-xl transition">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor" class="size-6 group-hover:stroke-[#7693fb] transition">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
-            </svg>
-        </a>
-    </div>
-    <div class="mt-4">
-        <?php
-        switch ($tab) {
-            case 'deposit':
-                include $basePath . 'depositTable.php';
-                break;
-            case 'withdraw':
-                include $basePath . 'withdrawTable.php';
-                break;
-            case 'all':
-                include $basePath . 'allTransactionTable.php';
-                break;
-            default:
-                echo "<p class='text-center text-red-500'>Invalid tab selected.</p>";
-        }
-        ?>
+<section class="p-6">
+    <div class="flex justify-between items-center mb-4">
+        <h2 class="text-xl font-semibold">Transaction Records</h2>
+        <button onclick="openModal()" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition">
+            + Add Transaction
+        </button>
     </div>
 
-    <?php include $basePath . 'transactionModals.php'; ?>
-</body>
+    <div class="overflow-x-auto bg-white rounded shadow">
+        <table class="w-full table-auto text-left border-collapse">
+            <thead class="bg-gray-100 text-gray-700">
+                <tr>
+                    <th class="p-4">No</th>
+                    <th class="p-4">Category</th>
+                    <th class="p-4">Amount</th>
+                    <th class="p-4">Date</th>
+                    <th class="p-4">Description</th>
+                </tr>
+            </thead>
+            <tbody class="text-gray-800 divide-y">
+                <?php
+                try {
+                    $stmt = $conn->query("SELECT * FROM income ORDER BY date DESC");
+                    $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+                    if (empty($data)) {
+                        echo "<tr><td colspan='5' class='p-4 text-center text-gray-500'>No data found.</td></tr>";
+                    } else {
+                        $no = 1;
+                        foreach ($data as $row) {
+                            echo "<tr>";
+                            echo "<td class='p-4'>" . $no++ . "</td>";
+                            echo "<td class='p-4'>" . htmlspecialchars($row['category']) . "</td>";
+                            echo "<td class='p-4'>Rp " . number_format($row['amount'], 0, ',', '.') . "</td>";
+                            echo "<td class='p-4'>" . htmlspecialchars($row['date']) . "</td>";
+                            echo "<td class='p-4'>" . htmlspecialchars($row['description']) . "</td>";
+                            echo "</tr>";
+                        }
+                    }
+                } catch (PDOException $e) {
+                    echo "<tr><td colspan='5' class='p-4 text-center text-red-500'>Error: " . htmlspecialchars($e->getMessage()) . "</td></tr>";
+                }
+                ?>
+            </tbody>
+        </table>
+    </div>
+</section>

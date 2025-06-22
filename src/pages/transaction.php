@@ -39,8 +39,6 @@ $basePath = __DIR__ . '/../components/'; ?>
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="/src/js/contentChart.js"></script>
-  <script src="/src/js/transactionModals.js"></script>
 </body>
 
 </html>

@@ -1,3 +1,6 @@
+<?php include __DIR__ . '/../../dbConnection.php'; ?>
+<?php include __DIR__ . '/dashboardLogic.php'; ?>
+
 <main class="flex-1">
     <div class="grid grid-cols-2 md:grid-cols-3 gap-10 md:gap-6 px-8 mb-5 poppins-extrabold items-stretch">
         <!-- Your Balance -->
@@ -20,7 +23,7 @@
                     <p class="hidden md:block text-lg">Your Balance</p>
                 </div>
                 <div class="">
-                    <h4 class="text-xl text-[#7693fb]">$10,000.00</h4>
+                    <h4 class="text-xl text-[#7693fb]">$<?= number_format($balance ?? 0, 0, ',', '.') ?></h4>
                 </div>
             </div>
 
@@ -69,7 +72,7 @@
                         <p class="text-lg font-semibold">Income</p>
                     </div>
                     <div>
-                        <h4 class="text-xl text-green-500 font-bold">+ $10,000.00</h4>
+                        <h4 class="text-xl text-green-500 font-bold">+ $<?= number_format($incomeTotal ?? 0, 0, ',', '.') ?></h4>
                     </div>
                 </div>
 
@@ -77,11 +80,11 @@
                 <div class="flex justify-between">
                     <div class="px-3">
                         <p class="text-lg text-gray-500 poppins-thin">This Month</p>
-                        <h1 class="text-xl poppins-extrabold">$2,000.00</h1>
+                        <h1 class="text-xl poppins-extrabold">$<?= number_format($monthlyIncome ?? 0, 0, ',', '.') ?></h1>
                     </div>
                     <div class="px-3">
                         <p class="text-lg text-gray-500 poppins-thin">Top Source</p>
-                        <h1 class="text-xl poppins-extrabold">Freelance</h1>
+                        <h1 class="text-xl poppins-extrabold"><?= $topIncomeCategory ?? '—' ?></h1>
                     </div>
                 </div>
                 <div class="border-b border-gray-200 -mb-10"></div>
@@ -120,7 +123,7 @@
                         </svg>
                         <p class="text-lg font-semibold">Expenses</p>
                     </div>
-                    <h4 class="text-xl text-red-500 font-bold">- $10,000.00</h4>
+                    <h4 class="text-xl text-red-500 font-bold">- $<?= number_format($expenseTotal ?? 0, 0, ',', '.') ?></h4>
                 </div>
 
                 <!-- Middle: Charts -->
@@ -208,8 +211,8 @@
                 </div>
             </div>
 
-            <div class="p-2">
-                <canvas id="expensesLineChart" height="86"></canvas>
+            <div class="p-5" style="height: 300px;">
+                <canvas id="incomeExpensesChart"></canvas>
             </div>
 
             <div class="border-t border-gray-200 mt-auto px-6 py-2 flex items-center justify-between text-sm">
@@ -228,4 +231,30 @@
         </div>
 
     </div>
+
+    <!-- At the end of your cardsDashboard.php, before closing main tag -->
+    <script>
+        const expenseChartData = <?= json_encode($expensesChartData ?? []) ?>;
+        const savingsData = {
+            saved: <?= $balance ?? 0 ?>,
+            spent: <?= $expenseTotal ?? 0 ?>
+        };
+
+        // Ensure monthlyExpenses has proper structure
+        const monthlyExpenses = <?= json_encode(array_map(function ($item) {
+                                    return [
+                                        'month' => $item['month'],
+                                        'total' => (float)$item['total']
+                                    ];
+                                }, $monthlyExpensesData ?? [])) ?>;
+
+        // Properly format comparison data
+        const monthlyComparison = {
+            labels: <?= json_encode(array_column($monthlyIncomeData ?? [], 'month')) ?>,
+            income: <?= json_encode(array_map('floatval', array_column($monthlyIncomeData ?? [], 'total'))) ?>,
+            expenses: <?= json_encode(array_map('floatval', array_column($monthlyExpensesData ?? [], 'total'))) ?>
+        };
+    </script>
+    <!-- Then load the script that uses these variables -->
+    <script src="/src/js/contentChart.js"></script>
 </main>
