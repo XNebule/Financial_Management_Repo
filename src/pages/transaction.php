@@ -17,7 +17,7 @@ $basePath = __DIR__ . '/../components/'; ?>
     rel="stylesheet" />
 </head>
 
-<body class="bg-slate-100 min-h-screen md:overflow-y-hidden">
+<body class="bg-slate-100 min-h-screen">
   <div class="flex min-h-screen">
     <!-- Sidebar -->
     <?php include $basePath . 'sidebar.php'; ?>
